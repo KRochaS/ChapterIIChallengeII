@@ -7,6 +7,13 @@ import { ModalEditFood } from '../../components/ModalEditFood';
 import api from '../../services/api';
 import { FoodsContainer } from './styles';
 
+interface FormProps {
+    image: string;
+    name: string;
+    price: number;
+    description: string;
+}
+
 
 export function Dashboard() {
     const [foods, setFoods] = useState<IFood[]>([]);
@@ -24,30 +31,30 @@ export function Dashboard() {
         getFoods();
     }, [])
 
-    async function handleAddFood() {
-
+    async function handleAddFood(food: FormProps) {
         try {
             const response = await api.post('/foods', {
-                ...foods,
+                ...food,
                 available: true,
-            })
+            });
+
             setFoods([...foods, response.data]);
         } catch (err) {
             console.log(err);
         }
     }
 
-    async function handleUpdateFood() {
-
+    async function handleUpdateFood(food: FormProps) {
         try {
             const foodUpdated = await api.put(
                 `/foods/${editingFood.id}`,
-                { ...editingFood, ...foods },
+                { ...editingFood, ...food },
             );
 
             const foodsUpdated = foods.map(f =>
                 f.id !== foodUpdated.data.id ? f : foodUpdated.data,
             );
+
             setFoods(foodsUpdated);
         } catch (err) {
             console.log(err);
