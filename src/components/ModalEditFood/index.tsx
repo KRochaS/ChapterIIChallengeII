@@ -19,15 +19,15 @@ interface ModalEditFoodProps {
     isOpen: boolean;
     setIsOpen: () => void;
     editingFood: FormProps;
-    handleUpdateFood: () => void;
+    handleUpdateFood: (data: FormProps) => void;
 }
 
 
 export function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUpdateFood }: ModalEditFoodProps) {
     const formRef = createRef<FormHandles>();
 
-    function handleSubmit() {
-        handleUpdateFood();
+    function handleSubmit(formValues: FormProps) {
+        handleUpdateFood(formValues);
         setIsOpen();
     };
 
