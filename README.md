@@ -18,9 +18,8 @@ Chapter II Challenge II: Finished :tada:
 
 Chapter II Challenge II from Ignite @Rocketseat 
 
-Functional application where the main goal is perform 
-two migration processes: The refactoring of Javascript to Typescript and 
-change the Class Components to Function Components.
+It's a functional application with the main goal of performing
+two migration processes: from Javascript to Typescript; and from Class Components to Function Components.
 
 
 ## :woman_technologist: Tech stack
