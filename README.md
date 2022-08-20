@@ -7,9 +7,9 @@ Chapter II Challenge II: Finished :tada:
 </h4>
 
 <p align="center">	
-   <img src="https://img.shields.io/badge/-ReactJS-C72828?style=flat&logoColor=white" />
+   <img src="https://img.shields.io/badge/-ReactJS-39B100?style=flat&logoColor=white" />
    
-   <img src="https://img.shields.io/badge/-Typescript-C72828?style=flat&logoColor=white" />
+   <img src="https://img.shields.io/badge/-Typescript-39B100?style=flat&logoColor=white" />
   
 </p>
 
